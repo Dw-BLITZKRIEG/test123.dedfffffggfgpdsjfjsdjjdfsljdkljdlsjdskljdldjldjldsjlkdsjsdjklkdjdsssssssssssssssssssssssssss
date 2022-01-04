@@ -65,8 +65,8 @@
 "1": [[0.22,0,"square"], [3,"triangle"], [1,"greentriangle"]], 
 "2": [[0.1,0,"triangle"], [3,"pentagon"], [1,"greenpentagon"]], 
 "3": [[0.05,0.75,"pentagon"], [1,"bigPentagon"]], 
-"4": [[0.05,0.22,"bigPentagon"], [1,"hugePentagon"]], 
-"5": [[0.04,0.1,"hugePentagon"], [1,"Hexagon"]], 
+"4": [[0.05,0.22,"bigPentagon"], [1,"Hexagon"]], 
+"5": [[0.04,0.1,"Hexagon"], [1,"Septagon"]], 
 "6": [[0.03,0.05,"Hexagon"], [1,"Septagon"]]
  }
 }
