@@ -46,7 +46,7 @@
     0
   ],
   "MAX_SKILL": 9,
-  "SOFT_MAX_SKILL": 0.59,
+  "SOFT_MAX_SKILL": 45,
   "TIER_1": 10,
   "TIER_2": 25,
   "TIER_3": 45,
@@ -56,7 +56,7 @@
   "SKILL_LEAK": 0,
   "STEALTH": 4,
   "MIN_SPEED": 0.001,
-  "FOOD_AMOUNT": 0.4, 
+  "FOOD_AMOUNT": 0.0001, 
   "SKILL_BOOST": 5,
   "BOTS": 0,
   "GLASS_HEALTH_FACTOR": 2
