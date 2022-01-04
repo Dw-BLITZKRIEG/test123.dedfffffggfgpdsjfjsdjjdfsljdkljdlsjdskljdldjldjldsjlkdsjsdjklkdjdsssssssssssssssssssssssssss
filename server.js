@@ -4662,22 +4662,32 @@ var maintainloop = (() => {
     let makefood = (() => {
         let food = [], foodSpawners = [];
         // The two essential functions
-        function getFoodClass(level) {
-            let a = { };
-            switch (level) {
-                case 0: a = Class.egg; break;
-                case 1: a = Class.square; break;
-                case 2: a = Class.triangle; break;
-                case 3: a = Class.pentagon; break;
-                case 4: a = Class.bigPentagon; break;
-                case 5: a = Class.hugePentagon; break;
-                default: throw('bad food level');
-            }
-            if (a !== {}) {
-                a.BODY.ACCELERATION = 0.015 / (a.FOOD.LEVEL + 1);
-            }
-            return a;
+  function getFoodClass(foodID, upgrading = false) {
+    let a = {};
+    if (foodID < 0) throw ('bad food level');
+    let foodBranch = false,
+        percal = 0;
+    for (let i = 1; i < c.FOODPATHS[foodID.toString()].length; i++) percal += 5 ** c.FOODPATHS[foodID.toString()][i][0];
+    let selected = Math.floor(Math.random() * percal);
+    percal = 0;
+    for (let i = 1; i < c.FOODPATHS[foodID.toString()].length; i++) {
+        percal += 5 ** c.FOODPATHS[foodID.toString()][i][0];
+        if (selected < percal) {
+            foodBranch = i;
+            break;
         }
+    }
+    if (upgrading) {
+        a = Class[c.FOODPATHS[foodID.toString()][foodBranch][1]];
+    } else {
+        a = Class[c.FOODPATHS[foodID.toString()][0][2]];
+    }
+ 
+    if (a !== {}) {
+        a.BODY.ACCELERATION = 0.015 / (a.FOOD.LEVEL + 1);
+    }
+    return a;
+}
         let placeNewFood = (position, scatter, level, allowInNest = false) => {
             let o = nearest(food, position); 
             let mitosis = false;
