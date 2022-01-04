@@ -4662,7 +4662,8 @@ var maintainloop = (() => {
     let makefood = (() => {
         let food = [], foodSpawners = [];
         // The two essential functions
-  function getFoodClass(foodID, upgrading = false) {
+        // The two essential functions
+    function getFoodClass(foodID, upgrading = false) {
     let a = {};
     if (foodID < 0) throw ('bad food level');
     let foodBranch = false,
@@ -4857,8 +4858,8 @@ var maintainloop = (() => {
                     do { o = nearest(food, { x: ran.gauss(o.x, 30), y: ran.gauss(o.y, 30), });
                     } while (o.id === oldId && --overflow);        
                     if (!overflow) continue;
-                    // Configure for the nest if needed
-                 if (o.foodLevel.toString() in c.FOODPATHS) {
+                                            // Configure for the nest if needed
+                        if (o.foodLevel.toString() in c.FOODPATHS) {
                             let probabilities = c.FOODPATHS[o.foodLevel.toString()][0][0],
                                 cens = census,
                                 amount = foodAmount;
