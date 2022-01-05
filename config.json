@@ -48,10 +48,8 @@
 "0": [[0.75,0,"egg"], [3,"square"], [1,"greensquare"]], 
 "1": [[0.22,0,"square"], [3,"triangle"], [1,"greentriangle"]], 
 "2": [[0.1,0,"triangle"], [3,"pentagon"], [1,"greenpentagon"]], 
-"3": [[0.05,0.75,"pentagon"], [1,"Septagon"]], 
+"3": [[0.05,0.75,"pentagon"], [1,"bigPentagon"]], 
 "4": [[0.05,0.22,"bigPentagon"], [1,"Hexagon"]], 
-"5": [[0.04,0.1,"Hexagon"], [1,"Septagon"]], 
-"6": [[0.03,0.04,"Hexagon"], [1,"Septagon"]], 
-"7": [[0.04,0.1,"Septagon"], [1,"Septagon"]] 
+"5": [[0.05,0.75,"Hexagon"], [1,"Septagon"]]
  }
 }
