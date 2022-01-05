@@ -44,37 +44,13 @@
   "SKILL_BOOST": 5,
   "BOTS": 0,
   "GLASS_HEALTH_FACTOR": 2,
-  "FOODPATHS": {
-    "0": [
-      [0.75, 0, "egg"],
-      [3, "square"],
-      [1, "greensquare"]
-    ],
-    "1": [
-      [0.22, 0, "square"],
-      [3, "triangle"],
-      [1, "greentriangle"]
-    ],
-    "2": [
-      [0.1, 0, "triangle"],
-      [3, "pentagon"],
-      [1, "greenpentagon"]
-    ],
-    "3": [
-      [0.05, 0.75, "pentagon"],
-      [1, "bigPentagon"]
-    ],
-    "4": [
-      [0.05, 0.22, "bigPentagon"],
-      [1, "Hexagon"]
-    ],
-    "5": [
-      [0.04, 5, "Hexagon"],
-      [1, "Septagon"]
-    ],
-    "6": [
-      [0.04, 0.1, "Hexagon"],
-      [1, "Septagon"]
-    ]
-  }
+ "FOODPATHS": {
+"0": [[0.75,0,"egg"], [3,"square"], [1,"greensquare"]], 
+"1": [[0.22,0,"square"], [3,"triangle"], [1,"greentriangle"]], 
+"2": [[0.1,0,"triangle"], [3,"pentagon"], [1,"greenpentagon"]], 
+"3": [[0.05,0.75,"pentagon"], [1,"bigPentagon"]], 
+"4": [[0.05,0.22,"bigPentagon"], [1,"Hexagon"]], 
+"5": [[0.04,0.1,"Hexagon"], [1,"Septagon"]], 
+"6": [[0.03,0.04,"Hexagon"], [1,"Septagon"]]
+ }
 }
