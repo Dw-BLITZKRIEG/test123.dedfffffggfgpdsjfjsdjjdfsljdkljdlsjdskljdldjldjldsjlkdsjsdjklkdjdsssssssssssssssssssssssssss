@@ -4865,7 +4865,7 @@ var maintainloop = (() => {
                                 amount = foodAmount;
                             if (room.isIn('nest', o)) {
                                 probabilities = c.FOODPATHS[o.foodLevel.toString()][1][0],
-                                    cens = censusNest;
+                                   cens = censusNest;
                                 amount = nestFoodAmount;
                             }
                             // Upgrade stuff
