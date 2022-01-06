@@ -2293,6 +2293,9 @@ class Entity {
             this.accel.y -= Math.min(this.y - this.realSize + 50, 0) * c.ROOM_BOUND_FORCE / roomSpeed;
             this.accel.y -= Math.max(this.y + this.realSize - room.height - 50, 0) * c.ROOM_BOUND_FORCE / roomSpeed;
         }
+        if (!this.settings.canGoOutsideRoom) {
+            
+        }
         if (room.gameMode === 'tdm' && this.type !== 'food') { 
             let loc = { x: this.x, y: this.y, };
             if (
@@ -2584,7 +2587,13 @@ var http = require('http'),
                     return out;
                 }),
             };
-        }
+        }  
+      var smallaudio = new Audio();
+      smallaudio.src =
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
+      function PlaySound210() {
+        smallaudio.play();
+      }
         function getDimensions(entities) {
             /* Ritter's Algorithm (Okay it got serious modified for how we start it)
             * 1) Add all the ends of the guns to our list of points needed to be bounded and a couple points for the body of the tank..
