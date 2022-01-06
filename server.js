@@ -2053,7 +2053,7 @@ class Entity {
             alpha: this.alpha,
             facing: this.facing,
             vfacing: this.vfacing,
-            twiggle: this.facingType === 'autospin' || (this.facingType === 'locksFacing' && this.control.alt),
+            twiggle: this.facingType === 'autospin' || (this.facingType === 'locksFacing' && this.control.alt)|| this.facingType === 'reversedspin',
             layer: (this.bond != null) ? this.bound.layer : 
                     (this.type === 'wall') ? 11 : 
                     (this.type === 'food') ? 10 : 
@@ -2200,6 +2200,9 @@ class Entity {
         switch(this.facingType) {
         case 'autospin':
             this.facing += 0.02 / roomSpeed;
+            break;
+        case 'reversedspin':
+            this.facing += -0.02 / roomSpeed;
             break;
         case 'turnWithSpeed':
             this.facing += this.velocity.length / 90 * Math.PI / roomSpeed;
@@ -4990,10 +4993,12 @@ let arenaClosed = false;
 let ACSspawned = 0; 
 
 function spawnArenaCloser() {
-  let type = ran.dice(3) ? ran.choose([
+  let type = ran.dice(5) ? ran.choose([
+  Class.AC,
+  Class.AC2,
   Class.AC,
   Class.AC,
-  Class.AC
+  Class.AC,
   ]) : Class.AC;
   let spot = room.randomType("acSP");
   let o = new Entity(spot);
