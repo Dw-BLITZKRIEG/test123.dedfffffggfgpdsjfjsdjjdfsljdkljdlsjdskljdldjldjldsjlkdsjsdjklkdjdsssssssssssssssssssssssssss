@@ -73,6 +73,7 @@ const room = {
     room.findType('bas4');
     room.findType('roid');
     room.findType('rock');
+    room.findType('acSP');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
         return {
@@ -2588,12 +2589,6 @@ var http = require('http'),
                 }),
             };
         }  
-      var smallaudio = new Audio();
-      smallaudio.src =
-        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
-      function PlaySound210() {
-        smallaudio.play();
-      }
         function getDimensions(entities) {
             /* Ritter's Algorithm (Okay it got serious modified for how we start it)
             * 1) Add all the ends of the guns to our list of points needed to be bounded and a couple points for the body of the tank..
@@ -5011,6 +5006,51 @@ function closeArena() {
   sockets.broadcast("Arena Closed: no players can join.");
   arenaClosed = true,
   ACSspawned = 10;
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
     spawnArenaCloser()
     spawnArenaCloser()
     spawnArenaCloser()
