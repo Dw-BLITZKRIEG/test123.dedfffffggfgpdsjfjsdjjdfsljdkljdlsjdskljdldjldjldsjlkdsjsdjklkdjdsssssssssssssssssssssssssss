@@ -4530,6 +4530,7 @@ var maintainloop = (() => {
     // Spawning functions
     let spawnBosses = (() => {
         let timer = 0;
+        let wave = 1;
         let boss = (() => {
             let i = 0,
                 names = [],
@@ -4559,11 +4560,12 @@ var maintainloop = (() => {
                         begin = 'A visitor is coming.';
                         arrival = names[0] + ' has arrived.'; 
                     } else {
-                        begin = 'Visitors are coming.';
-                        arrival = '';
-                        for (let i=0; i<n-2; i++) arrival += names[i] + ', ';
-                        arrival += names[n-2] + ' and ' + names[n-1] + ' have arrived.';
-                    }
+            begin = "The Wave has started!";
+            arrival = "";
+            arrival += "Wave " + wave + " has Started.";
+                    }    
+                     wave += 1;
+                
                 },
                 spawn: () => {
                     sockets.broadcast(begin);
@@ -4577,18 +4579,22 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 6000 && ran.dice(16000 - timer)) {
+            if (timer > 100 && ran.dice(15 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
-                switch (ran.chooseChance(40, 1)) {
-                    case 0: 
-                        choice = [[Class.palisade], 2, 'a', 'nest'];
-                        break;
-                    case 1: 
-                        choice = [[Class.palisade], 1, 'castle', 'norm']; 
-                        sockets.broadcast('A strange trembling...');
-                        break;
+                switch (wave) {
+          case 0:
+            choice = [[Class.elite_destroyer], 1, "castle", "nest"];
+
+            break;
+          case 1:
+            choice = [[Class.palisade], 1, "castle", "norm"];
+         break;     
+          case 2:
+            setTimeout(() => closeArena(), 1e3);
+            sockets.broadcast("Closing Arena Due socket timeout!");
+            break;     
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 3000);
@@ -4989,7 +4995,6 @@ function spawnArenaCloser() {
   let o = new Entity(spot);
   o.define(type);
   o.team = -100;
-  o.godmode = true
   o.life()
 }
 function closeArena() {
