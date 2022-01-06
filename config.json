@@ -17,10 +17,10 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi",
   "ROOM_SETUP": [
-    ["norm", "norm", "norm", "norm"],
+    ["acSP", "norm", "norm", "acSP"],
     ["norm", "nest", "norm", "norm"],
     ["norm", "norm", "nest", "norm"],
-    ["norm", "norm", "norm", "norm"]
+    ["acSP", "norm", "norm", "acSP"]
   ],
   "X_GRID": 4,
   "Y_GRID": 4,

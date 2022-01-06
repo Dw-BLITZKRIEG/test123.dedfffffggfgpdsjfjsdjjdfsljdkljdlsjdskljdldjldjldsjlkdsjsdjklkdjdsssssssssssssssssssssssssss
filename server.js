@@ -4987,9 +4987,9 @@ let ACSspawned = 0;
 
 function spawnArenaCloser() {
   let type = ran.dice(3) ? ran.choose([
-  Class.minelauncherAC,
-  Class.pentaAC,
-  Class.machineAC
+  Class.AC,
+  Class.AC,
+  Class.AC
   ]) : Class.AC;
   let spot = room.randomType("acSP");
   let o = new Entity(spot);
