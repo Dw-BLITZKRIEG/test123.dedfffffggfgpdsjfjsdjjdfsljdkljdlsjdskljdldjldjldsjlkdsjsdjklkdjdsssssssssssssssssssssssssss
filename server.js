@@ -4975,3 +4975,47 @@ let websockets = (() => {
 setInterval(gameloop, room.cycleSpeed);
 setInterval(maintainloop, 200);
 setInterval(speedcheckloop, 1000);
+
+let arenaClosed = false;
+let ACSspawned = 0; 
+
+function spawnArenaCloser() {
+  let type = ran.dice(3) ? ran.choose([
+  Class.minelauncherAC,
+  Class.pentaAC,
+  Class.machineAC
+  ]) : Class.AC;
+  let spot = room.randomType("acSP");
+  let o = new Entity(spot);
+  o.define(type);
+  o.team = -100;
+  o.godmode = true
+  o.life()
+}
+function closeArena() {
+  console.log("Arena Closed");
+  sockets.broadcast("Arena Closed: no players can join.");
+  arenaClosed = true,
+  ACSspawned = 10;
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+    spawnArenaCloser()
+     c.BOTS = 0,
+    setTimeout(() => {
+    console.log("Restarting Server...");
+    sockets.broadcast("Restarting Server..."); //If there are people that survived the arena closing, kick them
+    process.exit();
+  }, 60000);
+}
