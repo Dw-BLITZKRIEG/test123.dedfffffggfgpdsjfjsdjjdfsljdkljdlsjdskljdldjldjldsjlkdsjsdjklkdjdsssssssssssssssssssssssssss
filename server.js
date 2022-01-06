@@ -5026,23 +5026,6 @@ function closeArena() {
     spawnArenaCloser()
     spawnArenaCloser()
     spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
-    spawnArenaCloser()
      c.BOTS = 0,
     setTimeout(() => {
     console.log("Restarting Server...");
