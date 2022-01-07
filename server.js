@@ -2307,7 +2307,7 @@ class Entity {
                 (this.team !== -2 && room.isIn('bas2', loc)) ||
                 (this.team !== -3 && room.isIn('bas3', loc)) ||
                 (this.team !== -4 && room.isIn('bas4', loc))
-            ) { this.kill(); }
+            ) {}
         }
     }
 
@@ -4593,7 +4593,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 9 && ran.dice(15 - timer)) {
+            if (timer > 18 && ran.dice(20 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4603,9 +4603,9 @@ var maintainloop = (() => {
 
             break;
           case 1:
-            choice = [[Class.monster], 1, "castle", "norm"];
+            choice = [[Class.Monster], 1, "castle", "norm"];
          break;      
-          case 3:
+          case 2:
             setTimeout(() => closeArena(), 1e3);
             sockets.broadcast("Closing Arena Due socket timeout!");
             break;     
