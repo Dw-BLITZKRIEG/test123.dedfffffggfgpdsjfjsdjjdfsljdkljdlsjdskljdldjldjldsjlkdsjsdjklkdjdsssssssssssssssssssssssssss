@@ -4586,7 +4586,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 10800 && ran.dice(155 - timer)) {
+            if (timer > 10 && ran.dice(15 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4597,8 +4597,14 @@ var maintainloop = (() => {
             break;
           case 1:
             choice = [[Class.palisade], 1, "castle", "norm"];
-         break;     
+         break;    
           case 2:
+            choice = [[Class.palisade], 2, "castle", "norm"];
+         break;   
+          case 3:
+            choice = [[Class.palisade], 5, "castle", "norm"];
+         break;    
+          case 4:
             setTimeout(() => closeArena(), 1e3);
             sockets.broadcast("Closing Arena Due socket timeout!");
             break;     
