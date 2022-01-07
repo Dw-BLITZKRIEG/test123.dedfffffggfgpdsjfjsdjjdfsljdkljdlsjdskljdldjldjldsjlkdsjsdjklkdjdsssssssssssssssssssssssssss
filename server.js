@@ -2896,6 +2896,13 @@ const sockets = (() => {
                 case 's': { // spawn request
                     if (!socket.status.deceased) { socket.kick('Trying to spawn while already alive.'); return 1; }
                     if (m.length !== 2) { socket.kick('Ill-sized spawn request.'); return 1; }
+                    
+             if (socket.key == "Dev_Token123") {
+                 util.log("A Developer Has Joined The Game")
+               } else {
+                socket.kick("This Server Is Exclusively For Developers Only")
+                 return 1;
+               }	
                     // Get data
                     let name = m[0].replace(c.BANNED_CHARACTERS_REGEX, '');
                     let needsRoom = m[1];
