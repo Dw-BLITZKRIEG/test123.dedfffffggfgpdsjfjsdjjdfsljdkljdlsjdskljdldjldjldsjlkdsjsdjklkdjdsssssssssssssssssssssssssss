@@ -4996,7 +4996,7 @@ function spawnArenaCloser() {
   let type = ran.dice(5) ? ran.choose([
   Class.AC,
   Class.AC2,
-  Class.AC,
+  Class.AC2,
   Class.AC,
   Class.AC,
   ]) : Class.AC;
