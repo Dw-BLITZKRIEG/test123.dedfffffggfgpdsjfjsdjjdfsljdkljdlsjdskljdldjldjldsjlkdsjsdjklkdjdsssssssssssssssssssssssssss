@@ -2391,7 +2391,7 @@ class Entity {
                     }
                     // Only if we give messages
                     if (dothISendAText) { 
-                        instance.sendMessage('You killed ' + name + ((killers.length > 1) ? ' (with some help).' : '.')); 
+                        instance.sendMessage("You've  killed " + name + ((killers.length > 1) ? ' (with some help).' : '.')); 
                     }
                 });
                 // Prepare the next part of the next 
@@ -2406,13 +2406,13 @@ class Entity {
             });
             // Prepare it and clear the collision array.
             killText = killText.slice(0, -5);
-            if (killText === 'You have been kille') killText = 'You have died a stupid death';
+            if (killText === "You've been killed.") killText = 'You have died a stupid death.';
             this.sendMessage(killText + '.');
             // If I'm the leader, broadcast it:
             if (this.id === room.topPlayerID) {
                 let usurptText = (this.name === '') ? 'The leader': this.name;
                 if (notJustFood) { 
-                    usurptText += ' has been usurped by';
+                    usurptText += ' has been unsurprised by';
                     killers.forEach(instance => {
                         usurptText += ' ';
                         usurptText += (instance.name === '') ? 'an unnamed player' : instance.name;
@@ -2421,7 +2421,7 @@ class Entity {
                     usurptText = usurptText.slice(0, -4);
                     usurptText += '!';
                 } else {
-                    usurptText += ' fought a polygon... and the polygon won.';
+                    usurptText += ' Got killed by a polygon, what a loser...';
                 }
                 sockets.broadcast(usurptText);
             }
