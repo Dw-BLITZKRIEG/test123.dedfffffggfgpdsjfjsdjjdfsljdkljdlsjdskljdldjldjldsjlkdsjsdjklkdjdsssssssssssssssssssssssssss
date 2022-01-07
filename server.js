@@ -2307,7 +2307,7 @@ class Entity {
                 (this.team !== -2 && room.isIn('bas2', loc)) ||
                 (this.team !== -3 && room.isIn('bas3', loc)) ||
                 (this.team !== -4 && room.isIn('bas4', loc))
-            ) { this.kill(); }
+            ) {} // don't kill anything you bitch ass!
         }
     }
 
