@@ -17,9 +17,9 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi",
   "ROOM_SETUP": [
-    ["acSP", "norm", "norm", "acSP"],
-    ["norm", "nest", "norm", "norm"],
-    ["norm", "norm", "nest", "norm"],
+    ["acSP", "nest", "norm", "acSP"],
+    ["norm", "bas1", "bas1", "norm"],
+    ["norm", "bas1", "bas1", "norm"],
     ["acSP", "norm", "norm", "acSP"]
   ],
   "X_GRID": 4,

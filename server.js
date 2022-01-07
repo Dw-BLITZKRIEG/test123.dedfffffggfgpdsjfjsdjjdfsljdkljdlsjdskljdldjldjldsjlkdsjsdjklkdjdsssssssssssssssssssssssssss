@@ -4603,15 +4603,9 @@ var maintainloop = (() => {
 
             break;
           case 1:
-            choice = [[Class.palisade], 1, "castle", "norm"];
-         break;    
-          case 2:
-            choice = [[Class.palisade], 2, "castle", "norm"];
-         break;   
+            choice = [[Class.monster], 1, "castle", "norm"];
+         break;      
           case 3:
-            choice = [[Class.palisade], 5, "castle", "norm"];
-         break;    
-          case 4:
             setTimeout(() => closeArena(), 1e3);
             sockets.broadcast("Closing Arena Due socket timeout!");
             break;     
@@ -4635,7 +4629,7 @@ var maintainloop = (() => {
     // The NPC function
     let makenpcs = (() => {
         // Make base protectors if needed.
-            /*let f = (loc, team) => { 
+            let f = (loc, team) => { 
                 let o = new Entity(loc);
                     o.define(Class.baseProtector);
                     o.team = -team;
@@ -4643,7 +4637,7 @@ var maintainloop = (() => {
             };
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
-            }*/
+            }
         // Return the spawning function
         let bots = [];
         return () => {
