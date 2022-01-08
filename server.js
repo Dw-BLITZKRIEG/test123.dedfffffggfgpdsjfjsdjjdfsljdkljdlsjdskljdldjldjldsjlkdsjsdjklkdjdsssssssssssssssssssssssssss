@@ -75,6 +75,10 @@ const room = {
     room.findType('bad2');
     room.findType('bad3');
     room.findType('bad4');
+    room.findType('wal1');
+    room.findType('wal2');
+    room.findType('wal3');
+    room.findType('wal4');
     room.findType('roid');
     room.findType('rock');
     room.findType('acSP');
@@ -4711,7 +4715,7 @@ var maintainloop = (() => {
             }
       let x = (loc, team) => { 
                 let o = new Entity(loc);
-                    o.define(Class.baseProtector2);
+                    o.define(Class.baseProtector3);
                     o.team = -team;
                     o.color = [10, 11, 12, 15][team-1];
             };
