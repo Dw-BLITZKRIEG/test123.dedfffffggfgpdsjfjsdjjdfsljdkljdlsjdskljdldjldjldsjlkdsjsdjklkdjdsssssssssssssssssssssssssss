@@ -79,6 +79,14 @@ const room = {
     room.findType('wal2');
     room.findType('wal3');
     room.findType('wal4');
+    room.findType('waz1');
+    room.findType('waz2');
+    room.findType('waz3');
+    room.findType('waz4');
+    room.findType('blo1');
+    room.findType('blo2');
+    room.findType('blo3');
+    room.findType('blo4');
     room.findType('roid');
     room.findType('rock');
     room.findType('acSP');
@@ -4721,6 +4729,24 @@ var maintainloop = (() => {
             };
             for (let i=1; i<5; i++) {
                 room['wal' + i].forEach((loc) => { x(loc, i); }); 
+            }
+      let z = (loc, team) => { 
+                let o = new Entity(loc);
+                    o.define(Class.baseProtector4);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
+            };
+            for (let i=1; i<5; i++) {
+                room['waz' + i].forEach((loc) => { z(loc, i); }); 
+            }
+      let y = (loc, team) => { 
+                let o = new Entity(loc);
+                    o.define(Class.baseProtector5);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
+            };
+            for (let i=1; i<5; i++) {
+                room['boc' + i].forEach((loc) => { y(loc, i); }); 
             }
         // Return the spawning function
         let bots = [];
