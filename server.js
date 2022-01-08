@@ -83,10 +83,10 @@ const room = {
     room.findType('waz2');
     room.findType('waz3');
     room.findType('waz4');
-    room.findType('blo1');
-    room.findType('blo2');
-    room.findType('blo3');
-    room.findType('blo4');
+    room.findType('boc1');
+    room.findType('boc2');
+    room.findType('boc3');
+    room.findType('boc4');
     room.findType('roid');
     room.findType('rock');
     room.findType('acSP');
