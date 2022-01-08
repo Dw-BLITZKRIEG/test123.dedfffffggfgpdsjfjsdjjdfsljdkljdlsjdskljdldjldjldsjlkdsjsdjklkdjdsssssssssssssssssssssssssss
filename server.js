@@ -71,6 +71,10 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
+    room.findType('bad1');
+    room.findType('bad2');
+    room.findType('bad3');
+    room.findType('bad4');
     room.findType('roid');
     room.findType('rock');
     room.findType('acSP');
@@ -4593,7 +4597,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 9 && ran.dice(30 - timer)) {
+            if (timer > 2000 && ran.dice(2000 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4643,6 +4647,15 @@ var maintainloop = (() => {
             };
             for (let i=1; i<5; i++) {
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
+            }
+      let r = (loc, team) => { 
+                let o = new Entity(loc);
+                    o.define(Class.baseProtector2);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
+            };
+            for (let i=1; i<5; i++) {
+                room['bad' + i].forEach((loc) => { r(loc, i); }); 
             }
         // Return the spawning function
         let bots = [];
