@@ -4709,6 +4709,15 @@ var maintainloop = (() => {
             for (let i=1; i<5; i++) {
                 room['bad' + i].forEach((loc) => { r(loc, i); }); 
             }
+      let x = (loc, team) => { 
+                let o = new Entity(loc);
+                    o.define(Class.baseProtector2);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
+            };
+            for (let i=1; i<5; i++) {
+                room['wal' + i].forEach((loc) => { x(loc, i); }); 
+            }
         // Return the spawning function
         let bots = [];
         return () => {
